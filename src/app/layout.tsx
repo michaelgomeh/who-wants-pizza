@@ -18,8 +18,8 @@ import { ModalsProvider } from "@mantine/modals"
 import { CartModal, PizzaModal } from "../modals/modals"
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "Who Wants Pizza",
+  description: "A Pizza store for my portfolio.",
 }
 
 export default function RootLayout({ children }: { children: any }) {
