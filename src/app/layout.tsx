@@ -14,12 +14,7 @@ import { useDisclosure } from "@mantine/hooks"
 import { AppShell, Burger, Group, UnstyledButton, Stack } from "@mantine/core"
 import Shell from "./shell"
 import "public/styles.css"
-import { ContextModalProps, ModalsProvider } from "@mantine/modals"
-import { modifyItem, pizzaFromId } from "../lib/utils"
-import { ShoppingCart } from "tabler-icons-react"
-import { useAtom } from "jotai"
-import { cartAtom } from "../atoms/atoms"
-import CartView from "../components/cartView"
+import { ModalsProvider } from "@mantine/modals"
 import { CartModal, PizzaModal } from "../modals/modals"
 
 export const metadata = {
