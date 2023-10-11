@@ -12,6 +12,7 @@ import {
   Image,
   Text,
 } from "@mantine/core"
+
 import { useDisclosure } from "@mantine/hooks"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
