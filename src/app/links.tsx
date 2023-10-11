@@ -14,7 +14,6 @@ const Links = ({
     Home: "/",
     Menu: "/menu",
     About: "/about",
-    Contact: "/contact",
   }
 
   return (

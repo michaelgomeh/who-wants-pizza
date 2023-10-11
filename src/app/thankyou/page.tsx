@@ -1,7 +1,7 @@
 import React from "react"
 
 const Page = () => {
-  return "Thanks!"
+  return "Thanks! 🎉🎉🎉"
 }
 
 export default Page
