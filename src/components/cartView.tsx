@@ -32,7 +32,7 @@ const CartItemView = ({
   const [cart, setCart] = useAtom(cartAtom)
 
   return (
-    <Card withBorder>
+    <Card withBorder key={pizza.id}>
       <Grid align="center">
         <Grid.Col span={4}>
           <Card radius="md" bg="pizza.5" m={0} py={4} px={8}>
@@ -110,7 +110,9 @@ const CartView = () => {
         {items
           .sort((a, b) => a.price - b.price)
           .map((e) => (
-            <CartItemView item={e} />
+            <Box key={e.id}>
+              <CartItemView item={e} />
+            </Box>
           ))}
       </Stack>
 

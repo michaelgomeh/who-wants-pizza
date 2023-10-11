@@ -16,8 +16,9 @@ const About = () => {
       <Text>
         Our story began with a love for pizza and a commitment to
         sustainability. We believe that food should not only be tasty but also
-        good for the planet. That's why we source the freshest local ingredients
-        for our pizzas and offer a wide range of vegetarian and vegan options.
+        good for the planet. That&apos;s why we source the freshest local
+        ingredients for our pizzas and offer a wide range of vegetarian and
+        vegan options.
       </Text>
 
       <Text>Here are a few things that set us apart:</Text>
@@ -32,8 +33,8 @@ const About = () => {
           best quality.
         </li>
         <li>
-          Diverse Menu: Whether you're a vegetarian, vegan, or a meat lover, we
-          have a pizza that suits your taste.
+          Diverse Menu: Whether you&apos;re a vegetarian, vegan, or a meat
+          lover, we have a pizza that suits your taste.
         </li>
         <li>
           Online Ordering: Conveniently order your favorite pizzas online and
