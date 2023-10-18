@@ -38,7 +38,7 @@ const Shell = ({ children }) => {
       navbar={{
         width: 300,
         breakpoint: "sm",
-        collapsed: { desktop: true, mobile: !opened },
+        collapsed: { mobile: !opened },
       }}
       // padding="md"
     >
@@ -73,6 +73,8 @@ const Shell = ({ children }) => {
       <AppShell.Main
         p={pathname == "/" ? 0 : 16}
         pt={pathname == "/" ? 0 : 60 + 16}
+        maw={800}
+        mx="auto"
       >
         <AnimatePresence key={path}>
           <motion.div
