@@ -48,8 +48,8 @@ const Page = () => {
         <Group wrap="nowrap" justify="space-between" align="stretch" gap={0}>
           {pizzaCategories.map((e) =>
             curCategory == e.id ? (
-              // <Stack align="center" key={e.id} gap={0}>
-              <Button radius={8} size="sm" px={8}>
+              // <Stack align="center"  gap={0}>
+              <Button radius={8} size="sm" px={8} key={e.id}>
                 <Group wrap="nowrap" gap={4}>
                   {getCategoryIcon(e.id)}
                   <motion.div
