@@ -13,24 +13,25 @@ import {
   Text,
 } from "@mantine/core"
 
-import { useDisclosure } from "@mantine/hooks"
+// import { useDisclosure } from "@mantine/hooks"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
 import Links from "./links"
 import Link from "next/link"
 import { ShoppingCart } from "tabler-icons-react"
 import { useAtom, useAtomValue } from "jotai"
-import { cartAtom } from "../atoms/atoms"
+import { cartAtom, drawerOpenedAtom } from "../atoms/atoms"
 import { getTotalItems } from "../lib/utils"
 import { modals } from "@mantine/modals"
 
 const Shell = ({ children }) => {
-  const [opened, { toggle }] = useDisclosure()
+  // const [opened, { toggle }] = useDisclosure()
 
   const cart = useAtomValue(cartAtom)
 
   const pathname = usePathname()
   let path = pathname
+  const [drawerOpened, setDrawerOpened] = useAtom(drawerOpenedAtom)
 
   return (
     <AppShell
@@ -38,7 +39,12 @@ const Shell = ({ children }) => {
       navbar={{
         width: 300,
         breakpoint: "sm",
-        collapsed: { mobile: !opened },
+        collapsed: { mobile: !drawerOpened },
+      }}
+      aside={{
+        width: 300,
+        breakpoint: "md",
+        collapsed: { desktop: false, mobile: true },
       }}
       // padding="md"
     >
@@ -51,8 +57,8 @@ const Shell = ({ children }) => {
         >
           <Group>
             <Burger
-              opened={opened}
-              onClick={toggle}
+              opened={drawerOpened}
+              onClick={() => setDrawerOpened(!drawerOpened)}
               hiddenFrom="sm"
               size="sm"
             />
@@ -62,18 +68,15 @@ const Shell = ({ children }) => {
               </Link>
             </Box>
           </Group>
-          <Group ml="xl" gap={0} visibleFrom="sm">
-            <Links dir="row" />
-          </Group>
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar py="md" px={4}>
-        <Links dir="column" />
+      <AppShell.Navbar py="md" px={4} w={200}>
+        <Links dir="column" close={() => setDrawerOpened(false)} />
       </AppShell.Navbar>
       <AppShell.Main
         p={pathname == "/" ? 0 : 16}
         pt={pathname == "/" ? 0 : 60 + 16}
-        maw={800}
+        maw={600}
         mx="auto"
       >
         <AnimatePresence key={path}>

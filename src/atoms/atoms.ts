@@ -22,9 +22,8 @@ export const cartAtom = atomWithStorage<CartItem[]>("cart", [
   },
 ])
 
+export const drawerOpenedAtom = atom(false)
 ////////////
-
-const countAtom = atom(0)
 
 const countryAtom = atom("Japan")
 

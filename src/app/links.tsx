@@ -3,13 +3,7 @@ import Link from "next/link"
 import React from "react"
 
 type Urls = { [key: string]: string }
-const Links = ({
-  dir,
-  close,
-}: {
-  dir: direction
-  close?: () => CallableFunction
-}) => {
+const Links = ({ dir, close }: { dir: direction; close?: () => void }) => {
   const urls: Urls = {
     Home: "/",
     Menu: "/menu",

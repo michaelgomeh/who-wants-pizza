@@ -45,35 +45,35 @@ const Page = () => {
       transition={{ duration: 0.5, ease: "anticipate" }}
     >
       <Stack gap={0}>
-        <Group wrap="nowrap" justify="space-between" align="start" gap={4}>
+        <Group wrap="nowrap" justify="space-between" align="stretch" gap={0}>
           {pizzaCategories.map((e) =>
             curCategory == e.id ? (
-              <Stack align="center" mx="auto" key={e.id} gap={0}>
-                <Button radius={8} size="sm" px={8}>
-                  <Group wrap="nowrap" gap={4}>
-                    {getCategoryIcon(e.id)}
-                    <motion.div
-                      key={e.id}
-                      initial={{ opacity: 0, width: 0 }}
-                      animate={{ opacity: 1, width: "auto" }}
-                      // exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Text>{e.name}</Text>
-                    </motion.div>
-                  </Group>
-                </Button>
-              </Stack>
-            ) : (
-              <Stack align="center" mx="auto" key={e.id}>
-                <ActionIcon
-                  radius={8}
-                  size={36}
-                  onClick={() => setCurCategory(e.id)}
-                >
+              // <Stack align="center" key={e.id} gap={0}>
+              <Button radius={8} size="sm" px={8}>
+                <Group wrap="nowrap" gap={4}>
                   {getCategoryIcon(e.id)}
-                </ActionIcon>
-              </Stack>
+                  <motion.div
+                    key={e.id}
+                    initial={{ opacity: 0, width: 0 }}
+                    animate={{ opacity: 1, width: "auto" }}
+                    // exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Text>{e.name}</Text>
+                  </motion.div>
+                </Group>
+              </Button>
+            ) : (
+              // </Stack>
+              // <Stack align="center" mx="auto" key={e.id}>
+              <ActionIcon
+                radius={8}
+                size={36}
+                onClick={() => setCurCategory(e.id)}
+              >
+                {getCategoryIcon(e.id)}
+              </ActionIcon>
+              // </Stack>
             )
           )}
         </Group>

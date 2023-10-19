@@ -22,7 +22,7 @@ export default function HomePage() {
         style={{ objectPosition: "0% 0", position: "absolute" }}
         p={-24}
       />
-      <Box w="100vw" h={h} style={{ position: "absolute" }}>
+      <Box w="100%" h={h} style={{ position: "absolute" }}>
         <Stack align="center" justify="space-around" h={h}>
           <Stack align="center">
             <Title c="white">Pizza Bologna</Title>

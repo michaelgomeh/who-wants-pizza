@@ -66,8 +66,8 @@ const PizzaCard = ({ pizza, index }: { pizza: Pizza; index: number }) => {
         <Grid>
           <Grid.Col span={4}>
             <Image
-              height={128}
-              width={128}
+              height={64}
+              width={64}
               // fit="fill"
               src={pizza.img}
             />
