@@ -65,11 +65,12 @@ const Page = () => {
               </Button>
             ) : (
               // </Stack>
-              // <Stack align="center" mx="auto" key={e.id}>
+              // <Stack align="center" mx="auto">
               <ActionIcon
                 radius={8}
                 size={36}
                 onClick={() => setCurCategory(e.id)}
+                key={e.id}
               >
                 {getCategoryIcon(e.id)}
               </ActionIcon>
